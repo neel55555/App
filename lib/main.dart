@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './circle_image.dart';
 
 main() => runApp(MyApp());
 
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hello World',
       theme: ThemeData(
-        primaryColor: Colors.red[500],
+        primaryColor: Colors(0xF93C63),
       ),
       home: Scaffold(
         drawer: Drawer(
@@ -27,22 +28,19 @@ class MyApp extends StatelessWidget {
           title: Text('Hello World'),
         ),
         body: Container(
-          height: 40,
-          width: 40,
+          decoration: BoxDecoration(
+            border: Border.all(width: 2, color: Colors.green),
+          ),
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Container(
-                width: 40.0,
-                height: 40.0,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: NetworkImage("https://i.imgur.com/BoN9kdC.png")
-                  )
-                ),
-              )
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              CircleImage('https://i.imgur.com/BoN9kdC.png'),
             ],
           ),
         ),
