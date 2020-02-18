@@ -1,46 +1,30 @@
 import 'package:flutter/material.dart';
-import './circle_image.dart';
+import 'home_category_container_1.dart';
+import 'home_drawer.dart';
 
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   build(BuildContext context) {
     return MaterialApp(
-      title: 'Hello World',
+      title: 'SuperLinks',
       theme: ThemeData(
-        primaryColor: Colors(0xF93C63),
+        primaryColor: Color(0xFFF93C63),
       ),
       home: Scaffold(
-        drawer: Drawer(
-            child: ListView(
-          children: [
-            DrawerHeader(
-              child: Text('Drawer Header'),
-            ),
-            ListTile(title: Text('Hello World')),
-            ListTile(title: Text('Hello World')),
-            ListTile(title: Text('Hello World')),
-            ListTile(title: Text('Hello World')),
-            ListTile(title: Text('Hello World')),
-          ],
-        )),
+        drawer: HomeDrawer(),
         appBar: AppBar(
-          title: Text('Hello World'),
+          title: Text('AppName'),
         ),
         body: Container(
+          //padding: EdgeInsets.symmetric(horizontal: 20.0),
           decoration: BoxDecoration(
-            border: Border.all(width: 2, color: Colors.green),
+            //border: Border.all(width: 2, color: Colors.green),
+            color: Color(0xFFF0F4F7),
           ),
           child: ListView(
-            scrollDirection: Axis.horizontal,
             children: [
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
-              CircleImage('https://i.imgur.com/BoN9kdC.png'),
+              HomeCatCont(),
             ],
           ),
         ),
